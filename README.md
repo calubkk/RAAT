@@ -48,15 +48,15 @@ https://drive.google.com/file/d/1i4umieNgG3dctNqdTMI3Rj5tsrR5JvnM/view?usp=shari
 
    golden retrieval：```o.json```
 
-   relevant retrieval noise：```p.json```
+   golden retrieval + relevant retrieval noise：```p.json```
 
-   irrelevant retrieval noise：```c.json```
+   golden retrieval + irrelevant retrieval noise：```c.json```
 
-   counterfactual retrieval noise：```f.json```
+   golden retrieval + counterfactual retrieval noise：```f.json```
 
 > The training data used in the paper:```RAAT\tuner\data\temp.json```.
 
-You download temp.json with the following link: https://drive.google.com/file/d/109CVe8KWiYdpZLkz4nZjDZklYdUjxaZ2/view?usp=sharing
+You can download temp.json with the following link: https://drive.google.com/file/d/109CVe8KWiYdpZLkz4nZjDZklYdUjxaZ2/view?usp=sharing
 
 > What is the difference between the training and test data we used in the paper and RAG-Bench?
 
