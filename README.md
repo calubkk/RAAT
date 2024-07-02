@@ -69,6 +69,8 @@ We provide the training scripts for training the model. For example, you can run
 ```
 cd RAAT
 pip install -r requirements.txt
+mkdir checkpoints
+mkdir logs
 cp -r path_to_retrieval_robustness_benchmark  ./data/
 cp path_to_temp ./data/
 cd scripts
