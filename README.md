@@ -71,8 +71,8 @@ cd RAAT
 pip install -r requirements.txt
 mkdir checkpoints
 mkdir logs
-cp -r path_to_retrieval_robustness_benchmark  ./data/
-cp path_to_temp ./data/
+cp -r path_to_retrieval_robustness_benchmark  ./tuner/data/
+cp path_to_temp ./tuner/data/
 cd scripts
 bash train.sh
 ```
