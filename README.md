@@ -46,14 +46,14 @@ __How we use test_data to construct different retrieval contexts__ :
 
 * Counterfactual retrieval noise: choose from "counter_fac".
 
-> The test data used in the paper: ```RAAT\benchmark_cache```.
-
 __Description of benchmark_cache__: 
 
 * ```o.json```:golden retrieval
 * ```p.json```: golden retrieval + relevant retrieval noise
 * ```c.json```:golden retrieval + irrelevant retrieval noise
 * ```f.json```:golden retrieval + counterfactual retrieval noise
+
+> The test data used in the paper: ```RAAT\benchmark_cache```.
 
 > The training data used in the paper:```RAAT\tuner\data\temp.json```.
 
