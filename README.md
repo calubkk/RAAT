@@ -26,15 +26,19 @@ We provide the RAG-Bench for training and testing, available at
 - `test.json`
 
 
-1. train_data: 4500 samples.  
+1. train_data: 4500 samples.
+
+> Description of keys in training data:
 
    best_ctx: golden retrieval
 
-   ad_ctx: [relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise] 
+   ad_ctx: [relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise]
 
-2. dev_data: 300 samples.
+   
 
-3. test_data: 3000 samples.
+3. dev_data: 300 samples.
+
+4. test_data: 3000 samples.
 
    Golden retrieval : choose from "best_ctx".
 
