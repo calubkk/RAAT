@@ -35,24 +35,25 @@ __Description of keys in training data__ :
 3. dev_data: 300 samples.
 
 4. test_data: 3000 samples.
+   
+__How we use test_data to construct different retrieval contexts__ : 
 
-   Golden retrieval : choose from "best_ctx".
+* Golden retrieval : choose from "best_ctx".
 
-   Relevant retrieval noise : choose from "ctxs"(without answer entity).
+* Relevant retrieval noise : choose from "ctxs"(without answer entity).
 
-   Irrelevant retrieval noise: choose from other quires' retrieval context.
+* Irrelevant retrieval noise: choose from other quires' retrieval context.
 
-   Counterfactual retrieval noise: choose from "counter_fac".
+* Counterfactual retrieval noise: choose from "counter_fac".
 
 > The test data used in the paper: ```RAAT\benchmark_cache```.
 
-   golden retrieval：```o.json```
+__Description of benchmark_cache__: 
 
-   golden retrieval + relevant retrieval noise：```p.json```
-
-   golden retrieval + irrelevant retrieval noise：```c.json```
-
-   golden retrieval + counterfactual retrieval noise：```f.json```
+* ```o.json```:golden retrieval
+* ```p.json```: golden retrieval + relevant retrieval noise
+* ```c.json```:golden retrieval + irrelevant retrieval noise
+* ```f.json```:golden retrieval + counterfactual retrieval noise
 
 > The training data used in the paper:```RAAT\tuner\data\temp.json```.
 
