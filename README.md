@@ -20,7 +20,7 @@ Large Language Models (LLMs) exhibit substantial capabilities yet encounter chal
 We provide the RAG-Bench for training and testing, available at 
 [https://drive.google.com/file/d/1i4umieNgG3dctNqdTMI3Rj5tsrR5JvnM/view?usp=sharing](https://drive.google.com/file/d/1F6luqAHv646SSa-WlFcHi9pRwf-qybow/view?usp=sharing)
 
-### retrieval_robustness_benchmark
+### retrieval_robustness_benchmark(RAG-Bench)
 - `train.json`
 - `dev.json`
 - `test.json`
