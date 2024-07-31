@@ -50,9 +50,9 @@ __Description of benchmark_cache__:
 * ```c.json```:golden retrieval + irrelevant retrieval noise
 * ```f.json```:golden retrieval + counterfactual retrieval noise
 
-> The test data used in the paper: ```RAAT\benchmark_cache```.
+> The test data used in the paper(cache): ```RAAT\benchmark_cache```.
 
-> The training data used in the paper:```RAAT\tuner\data\temp.json```.
+> The training data used in the paper(cache):```RAAT\tuner\data\temp.json```.
 
 You can download temp.json with the following link: https://drive.google.com/file/d/109CVe8KWiYdpZLkz4nZjDZklYdUjxaZ2/view?usp=sharing
 
