@@ -141,7 +141,7 @@ class DataManager():
             best_ctx = sample['best_ctx']
             #known_or_unknown = sample['flag']
             #neg_samples = sample['neg']
-            neg_pos_ctx,neg_neg_ctx = schedule_ctx(sample['neg'][0]['ctxs'])
+            #neg_pos_ctx,neg_neg_ctx = schedule_ctx(sample['neg'][0]['ctxs'])
             sys_ctx_one_p = 'The following contexts will help you complete the question and answer pair.\nContext1:{ctx_0}'.format(ctx_0=ad_ctxs[0])
             sys_ctx_one_f = 'The following contexts will help you complete the question and answer pair.\nContext1:{ctx_0}'.format(ctx_0=ad_ctxs[1])
             sys_ctx_one_c = 'The following contexts will help you complete the question and answer pair.\nContext1:{ctx_0}'.format(ctx_0=ad_ctxs[2])
