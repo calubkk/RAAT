@@ -6,21 +6,21 @@ arXiv: [Abstract](https://arxiv.org/abs/2405.20978) / [PDF](https://arxiv.org/pd
 
 </div>
 
-## 📣 News
+# 📣 News
 - **[16/May/2024]** 🎉 Our paper is accepted by **ACL 2024 Main Conference(The 62nd Annual Meeting of the Association for Computational Linguistics)**!
 
-## ✨ Abstract
+# ✨ Abstract
 Large Language Models (LLMs) exhibit substantial capabilities yet encounter challenges, including hallucination, outdated knowledge, and untraceable reasoning processes. Retrieval-augmented generation (RAG) has emerged as a promising solution, integrating knowledge from external databases to mitigate these challenges. However, inappropriate retrieved passages can potentially hinder the LLMs' capacity to generate comprehensive and high-quality responses. Prior RAG studies on the robustness of retrieval noises often confine themselves to a limited set of noise types, deviating from real-world retrieval environments and limiting practical applicability. In this study, we initially investigate retrieval noises and categorize them into three distinct types, reflecting real-world environments. We analyze the impact of these various retrieval noises on the robustness of LLMs. Subsequently, we propose a novel RAG approach known as Retrieval-augmented Adaptive Adversarial Training (RAAT). RAAT leverages adaptive adversarial training to dynamically adjust the model's training process in response to retrieval noises. Concurrently, it employs multi-task learning to ensure the model's capacity to internally recognize noisy contexts. Extensive experiments demonstrate that the LLaMA-2 7B model trained using RAAT exhibits significant improvements in F1 and EM scores under diverse noise conditions.
 
-## ✨ The overview of RAAT
+# ✨ The overview of RAAT
 <div align="center"><img src="resources\overview.jpg" style="zoom:100%"></div>
 
-## 💪 Dataset
-### Data Preparation
+# 💪 Dataset
+## Data Preparation
 We provide the RAG-Bench for training and testing, available at 
 [https://drive.google.com/file/d/1i4umieNgG3dctNqdTMI3Rj5tsrR5JvnM/view?usp=sharing](https://drive.google.com/file/d/1F6luqAHv646SSa-WlFcHi9pRwf-qybow/view?usp=sharing)
 
-#### retrieval_robustness_benchmark
+### retrieval_robustness_benchmark
 - `train.json`
 - `dev.json`
 - `test.json`
@@ -67,8 +67,8 @@ The training and test data we used in the paper are subsets of RAG-Bench because
 It is manually annotated. Golden retrieval is required to be text that is somewhat related to the query and contains the answer entity (determined by regular matching). Relevant Retrieval Noise is required to be text that is highly related to the query but does not contain the answer entity. Irrelevant Retrieval Noise is required to be text that is completely unrelated to the query; we directly utilize retrieval contexts from other queries for this. Counterfactual Noise is a variant of Golden retrieval, where we change the answer entity in the Golden retrieval to a counterfactual answer entity (this counterfactual answer entity is constructed by ChatGPT based on the correct answer entity). You don't need to worry about Counterfactual Noise being too similar to Golden retrieval because we ensure that each query in the dataset has at least two Golden retrievals.
   
 
-## 💪 Usage
-### Train
+# 💪 Usage
+## Train
 We provide the training scripts for training the model. For example, you can run the following commands to train the model:
 ```
 cd RAAT
@@ -83,7 +83,7 @@ bash train.sh
 The scripts can be easily modified to train LLMs with different datasets. 
 > **Note:** Before running, the ```model_name_or_path```  has to be specified. Additionally, please download RAG-Bench and temp.json
 
-### Test
+## Test
 The following command can be used to test the model:
 ```
 cd RAAT
@@ -92,7 +92,7 @@ bash test.sh
 ```
 > **Note:** Before running, the ```test_model_name_or_path```  has to be specified.
 
-## 🔓 Citation
+# 🔓 Citation
 If this work is helpful to you, welcome to cite our paper as:
 ```
 @article{fang2024enhancing,
