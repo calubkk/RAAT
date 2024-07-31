@@ -28,7 +28,9 @@ We provide the RAG-Bench for training and testing, available at
 
 1. train_data: 4500 samples.
 
-_Description of keys in training data_ : "best_ctx" means golden retrieval. "ad_ctx" includes three types of retrieval noises, it is a list object, and the three types of noise in the list correspond to the following arrangement:[relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise].
+__Description of keys in training data__ : 
+* _"best_ctx"_ means golden retrieval. 
+* _"ad_ctx"_ includes three types of retrieval noises, it is a list object, and the three types of noise in the list correspond to the following arrangement:[relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise].
 
 3. dev_data: 300 samples.
 
