@@ -36,9 +36,9 @@ We provide the RAG-Bench for training and testing, available at
 
    Golden retrieval : choose from "best_ctx".
 
-   Relevant retrieval noise : choose from "ctxs".(without answers)
+   Relevant retrieval noise : choose from "ctxs"(without answer entity).
 
-   Irrelevant retrieval noise: choose from other samples.
+   Irrelevant retrieval noise: choose from other quires' retrieval context.
 
    Counterfactual retrieval noise: choose from "counter_fac".
 
@@ -59,6 +59,10 @@ You can download temp.json with the following link: https://drive.google.com/fil
 > What is the difference between the training and test data we used in the paper and RAG-Bench?
 
 The training and test data we used in the paper are subsets of RAG-Bench because RAG-Bench provides multiple noise retrieval samples for different retrieval noises. However, in testing or training, we only need to use one noise retrieval sample for each type of retrieval noise. To control the randomness brought by the selection of retrieval samples on the results, we cache the selected test and training data. If you want to reproduce the results in the paper, it is best to use our selected data cache.
+
+> Regarding the classification of retrieved passages as golden retrieval context and noisy retrieval context (relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise), is this labeling done by the language model (LLM) or manually annotated?
+
+It is manually annotated. Golden retrieval is required to be text that is somewhat related to the query and contains the answer entity (determined by regular matching). Relevant Retrieval Noise is required to be text that is highly related to the query but does not contain the answer entity. Irrelevant Retrieval Noise is required to be text that is completely unrelated to the query; we directly utilize retrieval contexts from other queries for this. Counterfactual Noise is a variant of Golden retrieval, where we change the answer entity in the Golden retrieval to a counterfactual answer entity (this counterfactual answer entity is constructed by ChatGPT based on the correct answer entity). You don't need to worry about Counterfactual Noise being too similar to Golden retrieval because we ensure that each query in the dataset has at least two Golden retrievals.
   
 
 ## 💪 Usage
