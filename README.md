@@ -56,9 +56,9 @@ __Description of benchmark_cache__:
 
 You can download temp.json with the following link: https://drive.google.com/file/d/109CVe8KWiYdpZLkz4nZjDZklYdUjxaZ2/view?usp=sharing
 
-> What is the difference between the training(or testing) data we used in the paper and RAG-Bench?
+> What is the difference between the training(or testing) data we used in the paper(cache) and RAG-Bench?
 
-The training and test data we used in the paper are subsets of RAG-Bench because RAG-Bench provides multiple noise retrieval samples for different retrieval noises. However, in testing or training, we only need to use one noise retrieval sample for each type of retrieval noise. To control the randomness brought by the selection of retrieval samples on the results, we cache the selected test and training data. If you want to reproduce the results in the paper, it is best to use our selected data cache.
+The training and test data utilized in our paper are subsets of RAG-Bench, as this dataset provides multiple noisy retrieval contexts for each query. In RAG-Bench, each type of retrieval noise may be associated with more than one context. However, for both testing and training purposes, it is not necessary to use all available contexts. To mitigate the randomness introduced by the selection of retrieval contexts and to ensure reproducibility of our results, we have cached the specific test and training data that we selected. If you wish to reproduce the results presented in our paper, it is recommended to use our cached data selection.
 
 > Regarding the classification of retrieved passages as golden retrieval context and noisy retrieval context (relevant retrieval noise,counterfactual retrieval noise,irrelevant retrieval noise), is this labeling done by the language model (LLM) or manually annotated?
 
