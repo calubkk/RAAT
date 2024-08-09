@@ -9,6 +9,7 @@ val_path=$root_dir/tuner/data/retrieval_robustness_benchmark/dev.json
 model_name_or_path=  #where u put ur LLMs
 train_data_cache=$root_dir/tuner/data/temp.json
 choice_cache=$root_dir/tuner/data/record.json
+accelerate config
 CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch  ../train.py \
     --train_file_path $train_path \
     --validation_file_path  $val_path \
